@@ -23,7 +23,7 @@ function Projects() {
               isBlog={false}
               title="E-commerce Healthy Cart"
               description="An advanced online platform for healthy food shopping with real-time order tracking and a secure payment gateway."
-              ghLink="https://github.com/faizan80235/healthy-cart"
+              ghLink="https://github.com/Faizan80235/Expert_b-final-project"
             />
           </Col>
 
@@ -32,7 +32,7 @@ function Projects() {
               isBlog={false}
               title="Portfolio"
               description="A dynamic personal portfolio website to showcase skills, projects, and contact info with dark mode support."
-              ghLink="https://github.com/faizan80235/portfolio"
+              ghLink="https://github.com/Faizan80235/Personal-Portfolio"
             />
           </Col>
 
@@ -41,7 +41,7 @@ function Projects() {
               isBlog={false}
               title="Chatrix"
               description="A real-time chat application with live messaging, authentication, and responsive design."
-              ghLink="https://github.com/faizan80235/chatrix"
+              ghLink="https://github.com/Faizan80235/Chatrix"
             />
           </Col>
 
@@ -50,27 +50,30 @@ function Projects() {
               isBlog={false}
               title="Landing Page"
               description="A sleek landing page designed to improve engagement and conversion rates."
-              ghLink="https://github.com/faizan80235/landing-page"
+              ghLink="https://github.com/Faizan80235/Landing-page"
             />
           </Col>
 
-          <Col md={4} className="project-card">
-            <ProjectCard
-              isBlog={false}
-              title="Milk Website"
-              description="A web platform for managing dairy product sales with inventory management and order processing."
-              ghLink="https://github.com/faizan80235/milk-website"
-            />
-          </Col>
+         
 
           <Col md={4} className="project-card">
             <ProjectCard
               isBlog={false}
               title="Technova"
               description="A technology news website offering the latest updates and in-depth reviews on trending tech topics."
-              ghLink="https://github.com/faizan80235/technova"
+              ghLink="https://github.com/Faizan80235/TECHNOVA"
             />
           </Col>
+
+          <Col md={4} className="project-card">
+  <ProjectCard
+    isBlog={false}
+    title="Courses Website"
+    description="A clean and responsive website to browse and explore online courses, organized by category with detailed course pages."
+    ghLink="https://github.com/Faizan80235/e-Learning"
+  />
+</Col>
+
         </Row>
       </Container>
     </Container>

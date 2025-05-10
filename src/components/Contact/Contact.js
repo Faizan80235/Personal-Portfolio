@@ -27,16 +27,14 @@ function Contact() {
           
           {/* Social Icons */}
           <div className="d-flex justify-content-center gap-4 mt-3">
-            <a href="https://github.com" target="_blank" rel="noreferrer" className="text-white">
+            <a href="https://github.com/Faizan80235/" target="_blank" rel="noreferrer" className="text-white">
               <FontAwesomeIcon icon={faGithub} size="2x" style={{ color: "#a560e8" }} />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noreferrer" className="text-white">
-              <FontAwesomeIcon icon={faTwitter} size="2x" style={{ color: "#a560e8" }} />
-            </a>
-            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" className="text-white">
+           
+            <a href="https://www.linkedin.com/in/faizan-ali-661595295/" target="_blank" rel="noreferrer" className="text-white">
               <FontAwesomeIcon icon={faLinkedin} size="2x" style={{ color: "#a560e8" }} />
             </a>
-            <a href="https://www.instagram.com" target="_blank" rel="noreferrer" className="text-white">
+            <a href="https://www.instagram.com/stories/faizan80235/" target="_blank" rel="noreferrer" className="text-white">
               <FontAwesomeIcon icon={faInstagram} size="2x" style={{ color: "#a560e8" }} />
             </a>
           </div>

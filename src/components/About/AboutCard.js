@@ -12,7 +12,7 @@ function AboutCard() {
             Hi Everyone, I am <span className="purple">Faizan</span>
             from <span className="purple"> Pakistan.</span>
             <br />
-            I am a student of class 7.
+            I am a student of class Eight 
             <br />
             I have a passion for technology and learning new things.
             <br />
