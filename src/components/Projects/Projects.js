@@ -73,6 +73,14 @@ function Projects() {
     ghLink="https://github.com/Faizan80235/e-Learning"
   />
 </Col>
+<Col md={4} className="project-card">
+  <ProjectCard
+    isBlog={false}
+    title="School Management System"
+    description="A web-based School Management System developed using React and Bootstrap. It features responsive UI components for managing students, teachers, classes, and attendance, making school administration efficient and user-friendly."
+    ghLink="https://github.com/Faizan80235/Evergreen-Grammer-international-school-mangemnet-system"
+  />
+</Col>
 
         </Row>
       </Container>
