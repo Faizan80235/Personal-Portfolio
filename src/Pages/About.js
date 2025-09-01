@@ -22,7 +22,7 @@ const AboutSection = () => {
           {/* About Content */}
           <div className="col-lg-6">
             <div className="about-content">
-              <h2 className="section-title mb-4">About Me</h2>
+              <h2 className="section-title mb-4" style={{"textAlign":"center"}}>About Me</h2>
               <p className="mb-4">
                 I'm a passionate web developer with 3+ years of experience
                 creating modern, responsive web applications. I love turning

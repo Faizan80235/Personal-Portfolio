@@ -62,3 +62,18 @@
   font-size: 0.95rem;
   color: #ccc;
 }
+
+
+
+
+.about-section .about-content {
+  text-align: center;   /* text ko center align karega */
+}
+.about-section .about-stats {
+  display: flex;
+  justify-content: center; /* stats ko center karega */
+  gap: 2rem;
+}
+.about-section .stat-item {
+  text-align: center;
+}

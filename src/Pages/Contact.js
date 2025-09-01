@@ -44,6 +44,7 @@ const ContactSection = () => {
                       <input
                         type="text"
                         name="name"
+                        placeholder="name"
                         value={formData.name}
                         onChange={handleChange}
                         required
@@ -54,6 +55,7 @@ const ContactSection = () => {
                       <label className="form-label">Email</label>
                       <input
                         type="email"
+                        placeholder="email"
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
@@ -67,6 +69,7 @@ const ContactSection = () => {
                     <textarea
                       rows={5}
                       name="message"
+                      placeholder="message"
                       value={formData.message}
                       onChange={handleChange}
                       required
@@ -74,7 +77,7 @@ const ContactSection = () => {
                     />
                   </div>
                   <div className="text-center">
-                    <button type="submit" className="btn btn-custom btn-lg px-5">
+                    <button type="submit" className=" text-white btn btn-custom btn-lg px-5">
                       <Mail size={16} className="me-2" />
                       Send Message
                     </button>
@@ -86,16 +89,16 @@ const ContactSection = () => {
                 <div className="social-links text-center">
                   <h5 className="mb-4">Connect With Me</h5>
                   <div className="social-icons">
-                    <a href="#" className="social-icon">
+                    <a href="https://github.com/Faizan80235" className="social-icon">
                       <Github size={24} />
                     </a>
-                    <a href="#" className="social-icon">
+                    <a href="https://www.linkedin.com/in/faizan-ali-fullstack-developer/" className="social-icon">
                       <Linkedin size={24} />
                     </a>
-                    <a href="#" className="social-icon">
+                    <a href="https://www.linkedin.com/in/faizan-ali-fullstack-developer/" className="social-icon">
                       <Twitter size={24} />
                     </a>
-                    <a href="mailto:john@example.com" className="social-icon">
+                    <a href="mailto:fa3031980@gmail.com" className="social-icon">
                       <Mail size={24} />
                     </a>
                   </div>

@@ -137,6 +137,115 @@ const Navbar = () => {
 };
 
 // Hero Section Component
+// const HeroSection = () => {
+//   const [imageLoaded, setImageLoaded] = useState(false);
+
+//   return (
+//     <section id="home" className="hero-section vh-100 d-flex align-items-center">
+//       <div className="container">
+//         <div className="row align-items-center h-100">
+//           {/* Left Side - Content */}
+//           <div className="col-lg-6 col-md-12 order-2 order-lg-1">
+//             <div className="hero-content text-center text-lg-start">
+//               <h1 className="hero-title mb-3 text-light">
+//                 Hi, I'm <span className="text-primary">Faizan Ali</span>
+//           <h2 className="hero-subtitle mb-2 text-center">
+//   <TypewriterEffect 
+//     strings={[
+//       "Web Developer",
+//       "React Developer", 
+//       "Python Developer",
+//       "UI/UX Designer",
+//       "Problem Solver"
+//     ]}
+//     speed={80}
+//     deleteSpeed={40}
+//     delaySpeed={1500}
+//   />
+// </h2>
+// </h1>
+
+              
+//               <p className="hero-description text-light mb-4">
+//                 Passionate about creating amazing digital experiences and bringing ideas to life through clean, efficient code.
+//               </p>
+              
+//               <div className="hero-buttons">
+//                 <button 
+//                   className="btn btn-primary btn-lg me-3 mb-2 hero-btn"
+//                   onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+//                 >
+//                   <ExternalLink size={20} className="me-2" />
+//                   View Projects
+//                 </button>
+//                 <button 
+//                   className="btn btn-outline-light btn-lg mb-2 hero-btn"
+//                   onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+//                 >
+//                   <Mail size={20} className="me-2" />
+//                   Contact Me
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+          
+//           {/* Right Side - Avatar */}
+//           <div className="col-lg-6 col-md-12 order-1 order-lg-2 mb-4 mb-lg-0">
+//             <div className="hero-avatar text-center">
+//               <div className={`avatar-container ${imageLoaded ? 'fade-in' : ''}`}>
+//                 <div className="coding-avatar">
+//                   <div className="desk-setup">
+//                     {/* Monitor */}
+//                     <div className="monitor">
+//                       <div className="screen">
+//                         <div className="code-lines">
+//                           <div className="code-line"></div>
+//                           <div className="code-line short"></div>
+//                           <div className="code-line"></div>
+//                           <div className="code-line medium"></div>
+//                         </div>
+//                       </div>
+//                       <div className="monitor-stand"></div>
+//                     </div>
+                    
+//                     {/* Person */}
+//                     <div className="person">
+//                       <div className="head"></div>
+//                       <div className="body"></div>
+//                       <div className="arms">
+//                         <div className="arm left-arm"></div>
+//                         <div className="arm right-arm"></div>
+//                       </div>
+//                     </div>
+                    
+//                     {/* Keyboard */}
+//                     <div className="keyboard"></div>
+                    
+//                     {/* Coffee Cup */}
+//                     <div className="coffee-cup">
+//                       <div className="steam"></div>
+//                     </div>
+//                   </div>
+//                 </div>
+                
+//                 {/* Floating Elements */}
+//                 <div className="floating-elements">
+//                   <div className="floating-element react">⚛️</div>
+//                   <div className="floating-element js">JS</div>
+//                   <div className="floating-element html">&lt;/&gt;</div>
+//                   <div className="floating-element css">{'{}'}</div>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+
+
 const HeroSection = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
@@ -144,32 +253,36 @@ const HeroSection = () => {
     <section id="home" className="hero-section vh-100 d-flex align-items-center">
       <div className="container">
         <div className="row align-items-center h-100">
+          
           {/* Left Side - Content */}
           <div className="col-lg-6 col-md-12 order-2 order-lg-1">
             <div className="hero-content text-center text-lg-start">
-              <h1 className="hero-title mb-3 text-light">
-                Hi, I'm <span className="text-primary">Faizan Ali</span>
-              </h1>
-              
-              <h2 className="hero-subtitle mb-4">
-                <TypewriterEffect 
-                  strings={[
-                    "Web Developer",
-                    "React Developer", 
-                    "Python Developer",
-                    "UI/UX Designer",
-                    "Problem Solver"
-                  ]}
-                  speed={80}
-                  deleteSpeed={40}
-                  delaySpeed={1500}
-                />
-              </h2>
-              
+              <div className="hero-heading">
+  <h1 className="hero-title text-light mb-0">
+    Hi, I'm <span className="text-primary">Faizan Ali</span>
+  </h1>
+  <span className="hero-subtitle text-light">
+    <TypewriterEffect 
+      strings={[
+        "Web Developer",
+        "React Developer", 
+        "Python Developer",
+        "UI/UX Designer",
+        "Problem Solver"
+      ]}
+      speed={80}
+      deleteSpeed={40}
+      delaySpeed={1500}
+    />
+  </span>
+</div>
+
+
               <p className="hero-description text-light mb-4">
                 Passionate about creating amazing digital experiences and bringing ideas to life through clean, efficient code.
               </p>
               
+              {/* Buttons */}
               <div className="hero-buttons">
                 <button 
                   className="btn btn-primary btn-lg me-3 mb-2 hero-btn"
@@ -195,6 +308,7 @@ const HeroSection = () => {
               <div className={`avatar-container ${imageLoaded ? 'fade-in' : ''}`}>
                 <div className="coding-avatar">
                   <div className="desk-setup">
+                    
                     {/* Monitor */}
                     <div className="monitor">
                       <div className="screen">
@@ -238,11 +352,14 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
   );
 };
+
+
 
 // Main App Component
 const App = () => {
@@ -326,6 +443,31 @@ const App = () => {
       .navbar-toggler:focus {
         box-shadow: none;
       }
+
+      .hero-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* mobile view mein center */
+}
+
+@media (min-width: 992px) {
+  .hero-heading {
+    align-items: flex-start; /* desktop pe left align ho */
+  }
+}
+
+.hero-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem; /* small gap */
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-top: 0; /* bilkul chipak ke niche */
+}
+
 
       /* Hero Section Styles */
       .hero-section {
