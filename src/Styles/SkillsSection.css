@@ -1,0 +1,35 @@
+.skills-section {
+  background: #121212; /* deep dark background */
+  color: #fff; /* make all text white by default */
+}
+
+.skill-card {
+  background: #1e1e1e !important;
+  color: #fff; /* ensure card text is white */
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.skill-progress {
+  height: 8px;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #2a2a2a; /* track color */
+}
+
+.progress-bar {
+  transition: width 1s ease-in-out;
+}
+
+.section-title {
+  color: #fff;
+}
+
+.section-description {
+  color: #bbb;
+}
