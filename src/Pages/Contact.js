@@ -4,15 +4,36 @@ import "../Styles/ContactSection.css";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert("Message sent! (This is a demo)");
-    setFormData({ name: "", email: "", message: "" });
-  };
+  const [status, setStatus] = useState(null);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("sending");
+
+    try {
+      const response = await fetch("https://formspree.io/f/xnnbzrlp", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus("success");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setStatus("error");
+      }
+    } catch (err) {
+      console.error("Form submission error:", err);
+      setStatus("error");
+    }
   };
 
   return (
@@ -76,10 +97,27 @@ const ContactSection = () => {
                 <div className="text-center">
                   <button type="submit" className="btn btn-custom btn-lg px-5">
                     <Mail size={18} className="me-2" />
-                    Send Message
+                    {status === "sending"
+                      ? "Sending..."
+                      : status === "success"
+                      ? "Message Sent!"
+                      : status === "error"
+                      ? "Error — Try Again"
+                      : "Send Message"}
                   </button>
                 </div>
               </form>
+
+              {status === "success" && (
+                <div className="alert alert-success mt-4 text-center">
+                  Thank you! Your message has been sent.
+                </div>
+              )}
+              {status === "error" && (
+                <div className="alert alert-danger mt-4 text-center">
+                  Oops! Something went wrong. Please try again later.
+                </div>
+              )}
 
               <hr className="my-5 border-secondary" />
 
