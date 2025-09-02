@@ -26,6 +26,21 @@
   transition: width 1s ease-in-out;
 }
 
+
+.skills-section {
+  background-color: #121212;
+}
+
+.skill-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 255, 195, 0.2);
+}
+
+
 .section-title {
   color: #fff;
 }

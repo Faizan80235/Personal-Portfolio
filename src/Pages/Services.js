@@ -51,13 +51,14 @@ const ServicesSection = () => {
 
         <div className="row">
           {services.map((service, index) => (
-            <div className="col-md-6 col-lg-4 mb-4" key={index}>
+            <div className="col-12 col-md-6 col-lg-4 mb-4" key={index}>
               <div
                 className="card h-100 text-center text-white border-0 shadow-lg"
                 style={{
                   background: "#1E1E1E",
                   borderRadius: "16px",
                   transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                  willChange: "transform",
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = "translateY(-6px)";
@@ -71,7 +72,6 @@ const ServicesSection = () => {
                 }}
               >
                 <div className="card-body d-flex flex-column align-items-center p-4">
-                  {/* Icon inside a circle */}
                   <div
                     className="d-flex align-items-center justify-content-center mb-3"
                     style={{
@@ -83,7 +83,6 @@ const ServicesSection = () => {
                   >
                     {service.icon}
                   </div>
-
                   <h5 className="fw-semibold mb-2">{service.title}</h5>
                   <p className="text-light small">{service.description}</p>
                 </div>

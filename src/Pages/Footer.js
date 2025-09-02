@@ -9,78 +9,42 @@ const Footer = () => {
     }
   };
 
+  const links = [
+    { id: "home", label: "Home" },
+    { id: "about", label: "About" },
+    { id: "services", label: "Services" },
+    { id: "skills", label: "Skills" }, // lowercase fixed
+    { id: "projects", label: "Projects" },
+    { id: "contact", label: "Contact" },
+  ];
+
   return (
     <footer className="footer-section py-4">
       <div className="container">
         <div className="row align-items-center">
+          {/* Left side */}
           <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
             <p className="mb-0">
-              © 2025 <span className="brand">Faizan Ali</span>. All rights
-              reserved.
+              © 2025 <span className="brand">Faizan Ali</span>. All rights reserved.
             </p>
           </div>
+
+          {/* Right side */}
           <div className="col-md-6 text-center text-md-end">
-            <div className="footer-links">
-              <a
-                href="#"
-                className="footer-link me-3"
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection("home");
-                }}
-              >
-                Home
-              </a>
-              <a
-                href="#"
-                className="footer-link me-3"
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection("about");
-                }}
-              >
-                About
-              </a>
-              <a
-                href="#"
-                className="footer-link me-3"
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection("services");
-                }}
-              >
-                Services
-              </a>
-             <a
-                href="#"
-                className="footer-link me-3"
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection("Skills");
-                }}
-              >
-                Skills
-              </a>
-    <a
-                href="#"
-                className="footer-link me-3"
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection("projects");
-                }}
-              >
-                Projects
-              </a>
-              <a
-                href="#"
-                className="footer-link"
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection("contact");
-                }}
-              >
-                Contact
-              </a>
+            <div className="footer-links d-flex flex-wrap justify-content-center justify-content-md-end">
+              {links.map((link, idx) => (
+                <a
+                  key={idx}
+                  href={`#${link.id}`}
+                  className="footer-link me-3 mb-2"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection(link.id);
+                  }}
+                >
+                  {link.label}
+                </a>
+              ))}
             </div>
           </div>
         </div>

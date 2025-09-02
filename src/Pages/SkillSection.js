@@ -4,7 +4,6 @@ import {
   SiJavascript, SiReact, SiTailwindcss, SiHtml5, SiCss3, SiTypescript,
   SiNextdotjs, SiVite, SiBootstrap, SiNodedotjs, SiExpress, SiMongodb,
   SiPostgresql, SiMysql, SiNestjs, SiGraphql, SiGit, SiGithub, SiPostman,
-  SiDocker
 } from "react-icons/si";
 
 // VS Code SVG
@@ -14,7 +13,7 @@ const VsCodeIcon = ({ size = 24 }) => (
   </svg>
 );
 
-// NoSQL SVG (database icon as example)
+// NoSQL Icon
 const NoSqlIcon = ({ size = 24, color = "#00758f" }) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width={size} height={size} fill={color}>
     <ellipse cx="32" cy="12" rx="20" ry="6"/>
@@ -47,36 +46,44 @@ const SkillsSection = () => {
   ];
 
   return (
-    <section id="skills" className="skills-section  text-light py-5">
+    <section id="skills" className="skills-section text-light py-5" style={{ backgroundColor: "#121212" }}>
       <div className="container">
-        <div className="row">
-          <div className="col-lg-12 text-center mb-5">
-            <h2 className="section-title text-white">Skills & Technologies</h2>
-            <p className="section-description text-secondary">
-              Here are some of the technologies I work with
-            </p>
-          </div>
+        <div className="text-center mb-5">
+          <h2 className="fw-bold text-white">Skills & Technologies</h2>
+          <p className="text-secondary">
+            Here are some of the technologies I work with
+          </p>
         </div>
 
         <div className="row">
           {skills.map((skill, index) => (
-            <div className="col-md-6 col-lg-4 mb-4" key={index}>
-              <div className="card skill-card h-100 border-0 shadow  text-white">
+            <div className="col-12 col-md-6 col-lg-4 mb-4" key={index}>
+              <div
+                className="card h-100 border-0 shadow-sm text-white"
+                style={{
+                  backgroundColor: "#1e1e1e",
+                  borderRadius: "16px",
+                }}
+              >
                 <div className="card-body">
                   <div className="d-flex align-items-center mb-3">
                     <div className="me-2">{skill.icon}</div>
-                    <h5 className="mb-0 text-white">{skill.name}</h5>
+                    <h5 className="mb-0">{skill.name}</h5>
                   </div>
-                  <div className="progress skill-progress mb-2 bg-dark">
+                  <div className="progress bg-dark mb-2" style={{ height: "8px", borderRadius: "4px" }}>
                     <div
                       className="progress-bar"
+                      role="progressbar"
                       style={{
                         width: `${skill.level}%`,
                         backgroundColor: skill.color,
                       }}
-                    ></div>
+                      aria-valuenow={skill.level}
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    />
                   </div>
-                  <small className="text-light">{skill.level}%</small>
+                  <small className="text-muted">{skill.level}% proficiency</small>
                 </div>
               </div>
             </div>

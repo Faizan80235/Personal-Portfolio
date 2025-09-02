@@ -1,9 +1,20 @@
 import React, { useState } from "react";
-import { Github, Linkedin, Twitter, Mail, Phone, MapPin } from "lucide-react";
+import {
+  Github,
+  Linkedin,
+  Twitter,
+  Mail,
+  Phone,
+  MapPin,
+} from "lucide-react";
 import "../Styles/ContactSection.css";
 
 const ContactSection = () => {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
   const [status, setStatus] = useState(null);
 
   const handleChange = (e) => {
@@ -28,7 +39,7 @@ const ContactSection = () => {
         setStatus("success");
         setFormData({ name: "", email: "", message: "" });
       } else {
-        setStatus("error");
+        throw new Error("Failed to submit");
       }
     } catch (err) {
       console.error("Form submission error:", err);
@@ -37,94 +48,112 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="contact-section py-5">
+    <section id="contact" className="contact-section py-5 text-light">
       <div className="container">
-        <div className="row fade-in-up mb-5">
-          <div className="col-lg-12 text-center">
-            <h2 className="contact-title">Contact Me</h2>
+        <div className="row text-center mb-5">
+          <div className="col-lg-12">
+            <h2 className="fw-bold text-white">Contact Me</h2>
+            <p className="text-secondary">Let’s get in touch or collaborate!</p>
           </div>
         </div>
 
-        <div className="row fade-in-up">
-          {/* Left side: Contact Info */}
+        <div className="row">
+          {/* Left: Contact Info */}
           <div className="col-lg-5 mb-4">
-            <h4 className="mb-3">Get in touch</h4>
-            <p>
-              <strong>Email:</strong>{" "}
-              <a href="mailto:fa3031980@gmail.com">fa3031980@gmail.com</a>
+            <h4 className="mb-3 text-white">Reach Out</h4>
+            <p className="mb-2">
+              <Phone size={16} className="me-2" />
+              <a href="tel:+923161435800" className="text-decoration-none text-secondary">
+                +92 3161435800
+              </a>
             </p>
-            <p>
-              <strong>Phone:</strong>{" "}
-              <a href="tel:+923161435800">+92 3161435800</a>
+            <p className="mb-2">
+              <Mail size={16} className="me-2" />
+              <a href="mailto:faizan.ali.developer.3976@gmail.com" className="text-decoration-none text-secondary">
+              faizan.ali.developer.3976@gmail.com
+              </a>
             </p>
-            <p>
-              Feel free to reach out to me for any inquiries, collaborations, or
-              project discussions. I am always open to new opportunities and
-              look forward to connecting with you.
+            <p className="text-secondary">
+              Feel free to reach out for any inquiries, collaborations, or freelance
+              opportunities.
             </p>
 
-            {/* Socials */}
+            {/* Social Links */}
             <div className="social-links mt-4">
-              <h6 className="mb-3">Follow Me</h6>
-              <div className="social-icons d-flex gap-3">
-                <a href="https://github.com/Faizan80235" className="social-icon">
+              <h6 className="mb-3 text-white">Follow Me</h6>
+              <div className="d-flex gap-3">
+                <a href="https://github.com/Faizan80235" className="social-icon text-secondary">
                   <Github size={22} />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/faizan-ali-fullstack-developer/"
-                  className="social-icon"
+                  className="social-icon text-secondary"
                 >
                   <Linkedin size={22} />
                 </a>
-                <a href="https://twitter.com/" className="social-icon">
+                <a href="https://twitter.com/" className="social-icon text-secondary">
                   <Twitter size={22} />
                 </a>
-                <a href="mailto:fa3031980@gmail.com" className="social-icon">
+                <a href="mailto:fa3031980@gmail.com" className="social-icon text-secondary">
                   <Mail size={22} />
                 </a>
               </div>
             </div>
           </div>
 
-          {/* Right side: Contact Form */}
+          {/* Right: Contact Form */}
           <div className="col-lg-7">
-            <div className="contact-card p-4">
+            <div className="contact-card p-4 rounded" style={{ backgroundColor: "#1e1e1e" }}>
               <form onSubmit={handleSubmit}>
                 <div className="row">
                   <div className="col-md-6 mb-3">
+                    <label htmlFor="name" className="form-label text-white">
+                      Name
+                    </label>
                     <input
                       type="text"
+                      id="name"
                       name="name"
-                      placeholder="Name"
                       value={formData.name}
                       onChange={handleChange}
                       required
                       className="form-control-custom"
+                      placeholder="Your Name"
                     />
                   </div>
                   <div className="col-md-6 mb-3">
+                    <label htmlFor="email" className="form-label text-white">
+                      Email
+                    </label>
                     <input
                       type="email"
+                      id="email"
                       name="email"
-                      placeholder="Email"
                       value={formData.email}
                       onChange={handleChange}
                       required
                       className="form-control-custom"
+                      placeholder="you@example.com"
                     />
                   </div>
                 </div>
+
                 <div className="mb-3">
+                  <label htmlFor="message" className="form-label text-white">
+                    Message
+                  </label>
                   <textarea
-                    rows={5}
+                    id="message"
                     name="message"
-                    placeholder="Message"
+                    rows={5}
                     value={formData.message}
                     onChange={handleChange}
                     required
                     className="form-control-custom"
-                  />
+                    placeholder="Write your message here..."
+                  ></textarea>
                 </div>
+
                 <button type="submit" className="btn btn-custom px-4">
                   {status === "sending"
                     ? "Sending..."
@@ -134,14 +163,14 @@ const ContactSection = () => {
                     ? "Error"
                     : "Send"}
                 </button>
-              </form>
 
-              {status === "success" && (
-                <div className="alert alert-success mt-3">Message sent!</div>
-              )}
-              {status === "error" && (
-                <div className="alert alert-danger mt-3">Something went wrong.</div>
-              )}
+                {status === "success" && (
+                  <div className="alert alert-success mt-3">Your message has been sent!</div>
+                )}
+                {status === "error" && (
+                  <div className="alert alert-danger mt-3">Oops! Something went wrong.</div>
+                )}
+              </form>
             </div>
           </div>
         </div>
