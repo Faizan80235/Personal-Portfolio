@@ -282,7 +282,7 @@ const HeroSection = () => {
 </div>
 
 
-              <p className="hero-description text-light mb-4">
+              <p className="hero-description text-light mb-4" style={{marginLeft:"0%"}}>
                 Passionate about creating amazing digital experiences and bringing ideas to life through clean, efficient code.
               </p>
               
