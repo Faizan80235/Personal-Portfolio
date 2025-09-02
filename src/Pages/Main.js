@@ -264,9 +264,13 @@ const HeroSection = () => {
   <span className="hero-subtitle text-light">
     <TypewriterEffect 
       strings={[
-        "Web Developer",
+        "Student Of Class Eight",
+        "Full Stack Web Developer",
+        
         "React Developer", 
         "Python Developer",
+        "Web Scraper",
+         "Backend Developer",
         "UI/UX Designer",
         "Problem Solver"
       ]}
