@@ -46,8 +46,8 @@ const AboutSection = () => {
                   </div>
                   <div className="col-sm-6 mb-3">
                     <div className="stat-item">
-                      <h4 className="text-primary mb-1">3+</h4>
-                      <p className="mb-0">Years Experience</p>
+                      <h4 className="text-primary mb-1">2+</h4>
+                      <p className="mb-0">Years Experience </p>
                     </div>
                   </div>
                 </div>

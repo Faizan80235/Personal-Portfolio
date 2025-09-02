@@ -46,10 +46,10 @@ const Footer = () => {
                 className="footer-link me-3"
                 onClick={(e) => {
                   e.preventDefault();
-                  scrollToSection("projects");
+                  scrollToSection("services");
                 }}
               >
-                Projects
+                Services
               </a>
              <a
                 href="#"
@@ -61,7 +61,16 @@ const Footer = () => {
               >
                 Skills
               </a>
-
+    <a
+                href="#"
+                className="footer-link me-3"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection("projects");
+                }}
+              >
+                Projects
+              </a>
               <a
                 href="#"
                 className="footer-link"

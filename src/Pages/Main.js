@@ -5,6 +5,7 @@ import { Menu, X, Github, Linkedin, Mail, ExternalLink } from 'lucide-react';
 import AboutSection from './About';
 import Skill from './SkillSection';
 import Project from  './Project'
+import Services from "./Services"
 import Contact from  './Contact'
 import Footer from './Footer'
 // Typewriter Effect Component
@@ -102,15 +103,17 @@ const Navbar = () => {
                 About
               </a>
             </li>
-            <li className="nav-item">
+            
+              <li className="nav-item">
               <a 
                 className="nav-link"
                 href="#"
-                onClick={(e) => { e.preventDefault(); scrollToSection('projects'); }}
+                onClick={(e) => { e.preventDefault(); scrollToSection('services'); }}
               >
-                Projects
+                Services
               </a>
             </li>
+
               <li className="nav-item">
               <a 
                 className="nav-link"
@@ -118,6 +121,16 @@ const Navbar = () => {
                 onClick={(e) => { e.preventDefault(); scrollToSection('Skills'); }}
               >
                 Skills
+              </a>
+            </li>
+
+            <li className="nav-item">
+              <a 
+                className="nav-link"
+                href="#"
+                onClick={(e) => { e.preventDefault(); scrollToSection('projects'); }}
+              >
+                Projects
               </a>
             </li>
             <li className="nav-item">
@@ -264,7 +277,6 @@ const HeroSection = () => {
   <span className="hero-subtitle text-light">
     <TypewriterEffect 
       strings={[
-        "Student Of Class Eight",
         "Full Stack Web Developer",
         
         "React Developer", 
@@ -978,6 +990,7 @@ const App = () => {
       <AboutSection></AboutSection>
 
       </section>
+      <Services></Services>
       <section id="Skills">
     <Skill></Skill>
 

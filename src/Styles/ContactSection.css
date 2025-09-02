@@ -21,6 +21,54 @@
   }
 }
 
+.contact-section {
+  background: #0d0d0d;
+  color: #fff;
+}
+
+.contact-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+.contact-card {
+  background: #1a1a1a;
+  border-radius: 10px;
+}
+
+.form-control-custom {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #444;
+  background: transparent;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.form-control-custom:focus {
+  border-color: #0d6efd;
+  outline: none;
+}
+
+.social-icons .social-icon {
+  color: #bbb;
+  transition: color 0.3s ease;
+}
+
+.social-icons .social-icon:hover {
+  color: #0d6efd;
+}
+/* Remove underline from links in contact info */
+.contact-section a {
+  text-decoration: none;
+  color: #fff; /* keep it white */
+}
+
+.contact-section a:hover {
+  color: #0d6efd; /* add hover effect */
+}
+
+
 /* =====================
    Contact Card
 ===================== */
