@@ -1,5 +1,5 @@
 import React from "react";
-import { Globe, Server, Layers, Wrench, FileCode } from "lucide-react";
+import { Globe, Server, Layers, Wrench, FileCode, Cpu } from "lucide-react";
 
 const ServicesSection = () => {
   const services = [
@@ -33,14 +33,16 @@ const ServicesSection = () => {
       description:
         "Creating Python-based tools, scripts, and applications for automation, data analysis, and system tasks.",
     },
+    {
+      icon: <Cpu size={28} className="text-info" />,
+      title: "Machine Learning & TensorFlow Models",
+      description:
+        "Designing, training, and deploying machine learning models using TensorFlow for predictive analytics and automation.",
+    },
   ];
 
   return (
-    <section
-      id="services"
-      className="py-5"
-      style={{ background: "#121212" }}
-    >
+    <section id="services" className="py-5" style={{ background: "#121212" }}>
       <div className="container">
         <div className="row text-center mb-5">
           <div className="col-lg-12">

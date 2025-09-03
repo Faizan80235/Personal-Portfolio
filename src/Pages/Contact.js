@@ -94,7 +94,7 @@ const ContactSection = () => {
                 <a href="https://twitter.com/" className="social-icon text-secondary">
                   <Twitter size={22} />
                 </a>
-                <a href="mailto:fa3031980@gmail.com" className="social-icon text-secondary">
+                <a href="mailto:faizan.ali.developer.3976@gmail.com" className="social-icon text-secondary">
                   <Mail size={22} />
                 </a>
               </div>
@@ -118,7 +118,7 @@ const ContactSection = () => {
                       onChange={handleChange}
                       required
                       className="form-control-custom"
-                      placeholder="Your Name"
+                      placeholder="John Doe"
                     />
                   </div>
                   <div className="col-md-6 mb-3">
@@ -133,7 +133,7 @@ const ContactSection = () => {
                       onChange={handleChange}
                       required
                       className="form-control-custom"
-                      placeholder="you@example.com"
+                      placeholder="JohnDoe@example.com"
                     />
                   </div>
                 </div>
@@ -150,7 +150,7 @@ const ContactSection = () => {
                     onChange={handleChange}
                     required
                     className="form-control-custom"
-                    placeholder="Write your message here..."
+                    placeholder="Hi! I am Interseted To Approcah Your Services "
                   ></textarea>
                 </div>
 
