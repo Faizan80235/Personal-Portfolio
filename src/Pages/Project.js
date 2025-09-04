@@ -98,6 +98,14 @@ const ProjectsSection = () => {
       githubUrl: "#",
       technologies: ["React", "Node.js", "Express", "MongoDB"],
     },
+      {
+    title: "Lumina Technologies Website",
+    description:
+      "A modern company website for Lumi Technologies, showcasing services, portfolio, and digital solutions.",
+    demoUrl: "https://lumina-technologies.vercel.app/",
+    githubUrl: "https://github.com/Faizan80235/LUMINA-TECHNOLOGIES",
+    technologies: ["React", "Bootstrap", "Node.js"],
+  },
     {
       title: "To-Do List App",
       description:
